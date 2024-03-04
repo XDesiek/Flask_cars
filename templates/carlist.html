@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% block title %}carlist{% endblock%}
+{% block header %} Car list{% endblock%}
+{% block content %}
+<div class="container">
+        <div class="card" style="width: 18rem;"></div>
+                <ul class="list-group list-group-flush">
+                {% for car in cars %}
+                <li class="list-group-item" ><a href="/details/{{ car.id }}">{{ car }}</a></li>
+                {% endfor%}
+                </ul>
+        </div>
+        <a href="/create" class="btn btn-success">Add Car</a>
+        <a href="/create_owner" class="btn btn-success">Add Owner</a>
+
+</div>
+{% endblock %}

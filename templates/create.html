@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">{% block title %} Crate a new car {% endblock %}</h1>
+    <form method="post">
+        <p>
+            <label for="model">Model</label>
+            <input type="text" name="model"
+                   placeholder="Model">
+            
+        </p>
+
+        <p>
+            <label for="producer">Producer</label>
+            <input type="text" name="producer"
+                   placeholder="Producer">
+        </p>
+
+        <p>
+            <label for="production_year">Production Year</label>
+            <input type="number" name="production_year"
+                   placeholder="Production Year">
+        </p>
+
+        <p>
+            <label for="horsepower">Horsepower</label>
+            <input type="number" name="horsepower"
+                   placeholder="Horsepower">
+        </p>
+
+        <p>
+            <label for="drive">Drive</label>
+            <input type="text" name="drive"
+                   placeholder="Drive">
+        </p>
+
+        <p>
+            <label for="fuel">Fuel</label>
+            <input type="text" name="fuel"
+                   placeholder="Fuel">
+        </p>
+
+        <p>
+            <label for="color">Color</label>
+            <input type="text" name="color"
+                   placeholder="Color">
+        </p>
+
+        <p>
+            <label for="gearbox">Gearbox</label>
+            <input type="text" name="gearbox"
+                   placeholder="Gearbox">
+        </p>
+        <p>
+            <label for="owner">Owner Id</label>
+            <input type="text" name="owner"
+                   placeholder="owner id">
+        </p>
+
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}
