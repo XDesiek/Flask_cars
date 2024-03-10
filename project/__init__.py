@@ -11,7 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 basedir = os.path.abspath(os.path.dirname(__file__))
 migrate = Migrate()
-    
+
 def create_app():
     app = Flask(__name__)
     bootstrap = Bootstrap5(app)

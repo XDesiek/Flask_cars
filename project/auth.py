@@ -2,7 +2,7 @@ from flask import Blueprint, flash, redirect, render_template, request, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from . import db
-from .models import User
+from .models import Car, User
 
 auth = Blueprint('auth', __name__)
 

@@ -1,16 +1,20 @@
-{% extends "base.html"%}
-{% block title %}carlist{% endblock%}
-{% block header %} Car list{% endblock%}
+{% extends "base.html" %}
+{% block title %}carlist{% endblock %}
+{% block header %} Car list{% endblock %}
 {% block content %}
 <div class="container">
-        <div class="card" style="width: 18rem;"></div>
-                <ul class="list-group list-group-flush">
-                {% for car in cars %}
-                <li class="list-group-item" ><a href="/details/{{ car.id }}">{{ car }}</a></li>
-                {% endfor%}
-                </ul>
+    <div class="row">
+        {% for car in cars %}
+        <div class="col-md-4 mb-3">
+            <a href="/details/{{ car.id }}"><div class="card">
+                <img src="{{ url_for('static', filename='images/lamborghini-luxury-super-car.jpg') }}" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">{{ car }}</p>
+                </div>
+            </div>
+        </a>
         </div>
-
-
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

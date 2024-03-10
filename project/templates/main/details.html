@@ -2,17 +2,23 @@
 {% block title %}car {{ car.id }}{% endblock%}
 {% block header %}car {{ car.id }}{% endblock%}
 {% block content %}
-        <strong>Model:</strong> {{ car.model }}<br>
-        <strong>Producer:</strong> {{ car.producer }}<br>
-        <strong>Production Year:</strong> {{ car.production_year }}<br>
-        <strong>Horsepower:</strong> {{ car.horsepower }}<br>
-        <strong>Drive:</strong> {{ car.drive }}<br>
-        <strong>Fuel:</strong> {{ car.fuel }}<br>
-        <strong>Color:</strong> {{ car.color }}<br>
-        <strong>Gearbox:</strong> {{ car.gearbox }}<br>
-        <a href="/" class="btn btn-warning">Go back</a>
-        <a href="/details/{{ car.id }}/edit" class="btn btn-success">Edit</a>
-        <form  method="POST" action="{{ url_for('main.delete', car_id=car.id ) }}">
-        <input class= "btn btn-danger" type="submit" value="Delete Car" onclick="return confirm('Are you sure you want to delete this entry?')"></form>
-        <a href="/details/{{ car.id }}/share" class="btn btn-primary">Share</a>
+<div>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h2>Car Specs</h2></li>
+                <li class="list-group-item"><strong>Model:</strong> {{ car.model }}</li>
+                <li class="list-group-item"><strong>Producer:</strong> {{ car.producer }}</li>
+                <li class="list-group-item"><strong>Production Year:</strong> {{ car.production_year }}</li>
+                <li class="list-group-item"><strong>Horsepower:</strong> {{ car.horsepower }}</li>
+                <li class="list-group-item"><strong>Drive:</strong> {{ car.drive }}</li>
+                <li class="list-group-item"><strong>Fuel:</strong> {{ car.fuel }}</li>
+                <li class="list-group-item"><strong>Color:</strong> {{ car.color }}</li>
+                <li class="list-group-item"><strong>Gearbox:</strong> {{ car.gearbox }}</li>
+            </ul>
+        <a href="/details/{{ car.id }}/edit" class="btn btn-outline-success">Edit</a>
+        <form method="POST" action="{{ url_for('main.delete', car_id=car.id ) }}">
+                <input class="btn btn-outline-danger btn-close-white" type="submit" value="Delete Car"
+                        onclick="return confirm('Are you sure you want to delete this entry?')">
+        </form>
+        <a href="/details/{{ car.id }}/share" class="btn btn-outline-primary">Share</a>
+</div>
 {% endblock %}

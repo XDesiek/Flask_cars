@@ -1,46 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
 <h1 style="width: 100%">{% block title %} Edit car {% endblock %}</h1>
 <form method="post">
-    <p>
-        <label for="model">Model</label>
-        <input type="text" name="model" placeholder="Model" value={{ car.model }}></input>
-    </p>
-    <p>
-        <label for="producer">Producer</label>
-        <input type="text" name="producer" placeholder="Producer" value={{ car.producer }}></input>
-    </p>
-    <p>
-        <label for="production_year">Production Year</label>
-        <input type="number" name="production_year" placeholder="Production Year" value={{ car.production_year }}></input>
-    </p>
-    <p>
-        <label for="horsepower">Horsepower</label>
-        <input type="number" name="horsepower" placeholder="Horsepower" value={{ car.horsepower }}></input>
-    </p>
-    <p>
-        <label for="drive">Drive</label>
-        <input type="text" name="drive" placeholder="Drive" value={{ car.drive }}></input>
-    </p>
-    <p>
-        <label for="fuel">Fuel</label>
-        <input type="text" name="fuel" placeholder="Fuel" value={{ car.fuel }}></input>
-    </p>
-    <p>
-        <label for="color">Color</label>
-        <input type="text" name="color" placeholder="Color" value={{ car.color }}></input>
-    </p>
-    <p>
-        <label for="gearbox">Gearbox</label>
-        <input type="text" name="gearbox" placeholder="Gearbox" value={{ car.gearbox }}></input>
-    </p>
-    <p>
-        <label for="owner">Owner Id</label>
-        <input type="text" name="owner" placeholder="owner id" value={{ car.owner }}></input>
-    </p>
-    <p>
-        <button class ="btn btn-outline-success btn-dangerb" type="submit">Submit</button>
-    </p>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="model" placeholder="Model" value="{{ car.model }}">
+        <label for="model" class="form-label">Model:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="producer" placeholder="Producer" value="{{ car.producer }}">
+        <label for="producer" class="form-label">Producer:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="production_year" placeholder="Production Year" value="{{ car.production_year }}">
+        <label for="production_year" class="form-label">Production Year:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="horsepower" placeholder="Horsepower" value="{{ car.horsepower }}">
+        <label for="horsepower" class="form-label">Horsepower:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="drive" placeholder="Drive" value="{{ car.drive }}">
+        <label for="drive" class="form-label">Drive:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="fuel" placeholder="Fuel" value="{{ car.fuel }}">
+        <label for="fuel" class="form-label">Fuel:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="color" placeholder="Color" value="{{ car.color }}">
+        <label for="color" class="form-label">Color:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="gearbox" placeholder="Gearbox" value="{{ car.gearbox }}">
+        <label for="gearbox" class="form-label">Gearbox:</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="owner" placeholder="Owner Id" value="{{ car.owner }}">
+        <label for="owner" class="form-label">Owner Id:</label>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-outline-primary">Create Car</button>
+    </div>
 </form>
+</div>
 {% endblock %}
