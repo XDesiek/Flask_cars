@@ -1,0 +1,40 @@
+<!-- templates/base.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  <header class="bg-danger ">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-danger" href="{{ url_for('main.carlist') }}">Carlist</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-danger" href="{{ url_for('auth.login') }}">Login</a>
+            <a class="nav-link text-danger" href="{{ url_for('auth.signup') }}">Signup</a>
+            <a class="nav-link text-danger" href="{{ url_for('auth.logout') }}">Loguout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <section>
+    {% block content %}{% endblock %}
+  </section>
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>

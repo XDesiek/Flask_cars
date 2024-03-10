@@ -12,7 +12,7 @@
         <strong>Gearbox:</strong> {{ car.gearbox }}<br>
         <a href="/" class="btn btn-warning">Go back</a>
         <a href="/details/{{ car.id }}/edit" class="btn btn-success">Edit</a>
-        <form  method="POST" action="{{ url_for('delete', car_id=car.id ) }}">
+        <form  method="POST" action="{{ url_for('main.delete', car_id=car.id ) }}">
         <input class= "btn btn-danger" type="submit" value="Delete Car" onclick="return confirm('Are you sure you want to delete this entry?')"></form>
         <a href="/details/{{ car.id }}/share" class="btn btn-primary">Share</a>
 {% endblock %}
