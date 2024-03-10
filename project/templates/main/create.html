@@ -1,64 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
     <h1 style="width: 100%">{% block title %} Crate a new car {% endblock %}</h1>
-    <form method="post">
-        <p>
-            <label for="model">Model</label>
-            <input type="text" name="model"
-                   placeholder="Model">
-            
-        </p>
+    <form method="post" >
+        <div class="mb-3">
+            <input type="text" class="form-control" id="model" placeholder="Model">
+        </div>
 
-        <p>
-            <label for="producer">Producer</label>
-            <input type="text" name="producer"
-                   placeholder="Producer">
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="producer" placeholder="Producer">
+        </div>
 
-        <p>
-            <label for="production_year">Production Year</label>
-            <input type="number" name="production_year"
-                   placeholder="Production Year">
-        </p>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="production_year" placeholder="Production Year">
+        </div>
 
-        <p>
-            <label for="horsepower">Horsepower</label>
-            <input type="number" name="horsepower"
-                   placeholder="Horsepower">
-        </p>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="horsepower" placeholder="Horsepower">
+        </div>
 
-        <p>
-            <label for="drive">Drive</label>
-            <input type="text" name="drive"
-                   placeholder="Drive">
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="drive" placeholder="Drive">
+        </div>
 
-        <p>
-            <label for="fuel">Fuel</label>
-            <input type="text" name="fuel"
-                   placeholder="Fuel">
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="fuel" placeholder="Fuel">
+        </div>
 
-        <p>
-            <label for="color">Color</label>
-            <input type="text" name="color"
-                   placeholder="Color">
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="color" placeholder="Color">
+        </div>
 
-        <p>
-            <label for="gearbox">Gearbox</label>
-            <input type="text" name="gearbox"
-                   placeholder="Gearbox">
-        </p>
-        <p>
-            <label for="owner">Owner Id</label>
-            <input type="text" name="owner"
-                   placeholder="owner id">
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="gearbox" placeholder="Gearbox">
+        </div>
 
-        <p>
-            <button type="submit">Submit</button>
-        </p>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="owner" placeholder="Owner Id">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Create Car</button>
+        </div>
     </form>
+</div>
 {% endblock %}

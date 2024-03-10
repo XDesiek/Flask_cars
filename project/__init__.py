@@ -2,7 +2,8 @@
 import os
 
 from flask import Flask
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap5
 from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -13,7 +14,7 @@ migrate = Migrate()
     
 def create_app():
     app = Flask(__name__)
-    bootstrap = Bootstrap(app)
+    bootstrap = Bootstrap5(app)
     app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///' + os.path.join(basedir, 'cars_database.db')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
