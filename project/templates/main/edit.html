@@ -5,52 +5,52 @@
 <h1 style="width: 100%">{% block title %} Edit car {% endblock %}</h1>
 <form method="post">
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="model" placeholder="Model" value="{{ car.model }}">
+        <input type="text" class="form-control" name="model" placeholder="Model" value="{{ car.model }}">
         <label for="model" class="form-label">Model:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="producer" placeholder="Producer" value="{{ car.producer }}">
+        <input type="text" class="form-control" name="producer" placeholder="Producer" value="{{ car.producer }}">
         <label for="producer" class="form-label">Producer:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="production_year" placeholder="Production Year" value="{{ car.production_year }}">
+        <input type="number" class="form-control" name="production_year" placeholder="Production Year" value="{{ car.production_year }}">
         <label for="production_year" class="form-label">Production Year:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="horsepower" placeholder="Horsepower" value="{{ car.horsepower }}">
+        <input type="number" class="form-control" name="horsepower" placeholder="Horsepower" value="{{ car.horsepower }}">
         <label for="horsepower" class="form-label">Horsepower:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="drive" placeholder="Drive" value="{{ car.drive }}">
+        <input type="text" class="form-control" name="drive" placeholder="Drive" value="{{ car.drive }}">
         <label for="drive" class="form-label">Drive:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="fuel" placeholder="Fuel" value="{{ car.fuel }}">
+        <input type="text" class="form-control" name="fuel" placeholder="Fuel" value="{{ car.fuel }}">
         <label for="fuel" class="form-label">Fuel:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="color" placeholder="Color" value="{{ car.color }}">
+        <input type="text" class="form-control" name="color" placeholder="Color" value="{{ car.color }}">
         <label for="color" class="form-label">Color:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="gearbox" placeholder="Gearbox" value="{{ car.gearbox }}">
+        <input type="text" class="form-control" name="gearbox" placeholder="Gearbox" value="{{ car.gearbox }}">
         <label for="gearbox" class="form-label">Gearbox:</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="owner" placeholder="Owner Id" value="{{ car.owner }}">
+        <input type="text" class="form-control" name="owner" placeholder="Owner Id" value="{{ car.owner }}">
         <label for="owner" class="form-label">Owner Id:</label>
     </div>
 
     <div class="mb-3">
-        <button type="submit" class="btn btn-outline-primary">Create Car</button>
+        <button type="submit" class="btn btn-outline-primary">Edit Car</button>
     </div>
 </form>
 </div>
